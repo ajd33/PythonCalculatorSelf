@@ -2,4 +2,3 @@
 
 # calculator
 
-# Statistics
