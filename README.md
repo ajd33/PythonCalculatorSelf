@@ -4,8 +4,8 @@ You need to make at least 7 unit tests and should develop your tests as you writ
 
 Requirements:
 
-Correct usage of object and static methods and properties
-At least 7 unit tests
-At least 7 commits
-Your program works
-Your docker file is setup to run the program
+- Correct usage of object and static methods and properties
+- At least 7 unit tests
+- At least 7 commits
+- Your program works
+- Your docker file is setup to run the program
