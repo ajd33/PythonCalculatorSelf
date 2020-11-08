@@ -2,6 +2,7 @@ from Addition import addition
 from Subtraction import subtraction
 from Multiplication import multiplication
 from Division import division
+from SquareRoot import square_root
 
 
 class Calculator:
