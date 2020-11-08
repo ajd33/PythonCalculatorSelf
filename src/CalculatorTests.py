@@ -1,9 +1,11 @@
 import unittest
+
 from Calculator import Calculator
 from CsvReader import CsvReader
 
 
 class MyTestCase(unittest.TestCase):
+
     def setUp(self) -> None:
         self.calculator = Calculator()
 
@@ -11,13 +13,18 @@ class MyTestCase(unittest.TestCase):
         self.assertIsInstance(self.calculator, Calculator)
 
     def test_subtraction(self):
-        test_data = CsvReader('/src/UnitTestSubtraction.csv').data
+        test_data = CsvReader("src/UnitTestSubtraction.csv").data
         for row in test_data:
-            self.assertEqual(self.calculator.subtract(row['Value 1'], row['Value 2']), int(row['Result']))
-            self.assertEqual(self.calculator.result, int(row['Result']))
+            result = float(row['Result'])
+            self.assertEqual(self.calculator.subtract(row['Value 1'], row['Value 2']), result)
+            self.assertEqual(self.calculator.result, result)
 
-    def test_results_property(self):
-        self.assertEqual(self.calculator.result, 0)
+    def test_addition(self):
+        test_data = CsvReader("src/UnitTestAddition.csv").data
+        for row in test_data:
+            result = float(row['Result'])
+            self.assertEqual(self.calculator.add(row['Value 1'], row['Value 2']), result)
+            self.assertEqual(self.calculator.result, result)
 
 
 if __name__ == '__main__':

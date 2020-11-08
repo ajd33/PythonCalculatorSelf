@@ -1,7 +1,7 @@
-FROM python:3.7
+FROM python:3.8
 
-ADD . .
+ADD src /src
 
-RUN pip install coverage
+CMD ["python", "./src/CsvReaderTests.py"]
 
-CMD [ "python", "./src/CalculatorTests.py" ]
+CMD ["python", "./src/CalculatorTests.py"]
